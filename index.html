@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>โยธิน อินทรภิรมย์ — Portfolio</title>
+<meta name="description" content="ประวัติและผลงาน Video Editor & Motion Designer">
+<meta property="og:title" content="โยธิน อินทรภิรมย์ — Portfolio">
+<meta property="og:description" content="ประวัติและผลงาน Video Editor & Motion Designer">
+<meta property="og:image" content="img/profile.webp">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#F2AB1D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23F2AB1D'/%3E%3Cpath d='M12.5 9.5l11 6.5-11 6.5z' fill='%233A3A3A'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap">
+
+<style>
+/* ===== โทนสีตามไฟล์ ref ===== */
+:root{
+  --amber:#F2AB1D;
+  --amber-soft:#FCEBC6;
+  --amber-deep:#D8930C;
+  --ink:#3A3A3A;
+  --bg:#E1E1E1;
+  --surface:#F1F1F1;
+  --surface-2:#E7E7E7;
+  --muted:#7A7A7A;
+  --border:#D2D2D2;
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.07);
+  --shadow-lift:0 3px 8px rgba(0,0,0,.08),0 20px 46px rgba(0,0,0,.14);
+  --r:20px; --maxw:1080px;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --amber:#F2AB1D; --amber-soft:#3A2C0E; --amber-deep:#FFC24D;
+  --ink:#ECECEC; --bg:#1A1A1A; --surface:#242424; --surface-2:#2E2E2E;
+  --muted:#9C9C9C; --border:#343434;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 8px 24px rgba(0,0,0,.4);
+  --shadow-lift:0 3px 8px rgba(0,0,0,.6),0 20px 46px rgba(0,0,0,.6);
+}}
+:root[data-theme="dark"]{
+  --amber:#F2AB1D; --amber-soft:#3A2C0E; --amber-deep:#FFC24D;
+  --ink:#ECECEC; --bg:#1A1A1A; --surface:#242424; --surface-2:#2E2E2E;
+  --muted:#9C9C9C; --border:#343434;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 8px 24px rgba(0,0,0,.4);
+  --shadow-lift:0 3px 8px rgba(0,0,0,.6),0 20px 46px rgba(0,0,0,.6);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Prompt",system-ui,-apple-system,"Noto Sans Thai",sans-serif;
+  font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:16px}
+@media (min-width:768px){.wrap{padding-inline:28px}}
+
+/* ===== หัวเว็บ ===== */
+header{padding:40px 0 30px}
+@media (min-width:860px){header{padding:70px 0 44px}}
+.hero{display:grid;gap:26px;align-items:center}
+@media (min-width:860px){.hero{grid-template-columns:1fr auto;gap:48px}}
+
+.quote{
+  font-size:56px;line-height:.5;color:var(--amber);
+  font-weight:700;letter-spacing:-.04em;margin-bottom:6px;display:block;
+}
+.eyebrow{
+  display:inline-block;background:var(--amber);color:#3A3A3A;
+  font-size:13px;font-weight:600;letter-spacing:.01em;
+  padding:6px 16px;border-radius:100px;margin-bottom:14px;
+}
+h1{
+  margin:0;font-size:clamp(30px,7vw,52px);font-weight:700;
+  letter-spacing:-.03em;line-height:1.1;
+}
+h1 .dot{color:var(--amber)}
+.sub-en{margin:8px 0 0;color:var(--muted);font-size:clamp(14px,2.6vw,17px);font-weight:400}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.links a{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--surface);border:1px solid var(--border);
+  color:var(--ink);text-decoration:none;font-size:13.5px;font-weight:500;
+  padding:8px 15px;border-radius:100px;transition:.16s;
+}
+.links a:hover{background:var(--amber);border-color:var(--amber);color:#3A3A3A}
+
+/* รูปโปรไฟล์ + บล็อกเหลืองซ้อนหลัง แบบใน ref */
+.portrait{position:relative;width:170px;justify-self:start}
+@media (min-width:860px){.portrait{width:290px;justify-self:end}}
+.portrait::before{
+  content:"";position:absolute;inset:16px -16px -16px 16px;
+  background:var(--amber);border-radius:var(--r);
+}
+.portrait img{
+  position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 12%;
+  border-radius:var(--r);box-shadow:var(--shadow);
+}
+
+/* ===== Dropdown ใหญ่ 2 อัน ===== */
+.panel{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);box-shadow:var(--shadow);
+  margin-bottom:18px;overflow:hidden;
+}
+.panel>summary{
+  list-style:none;cursor:pointer;user-select:none;
+  display:flex;align-items:center;gap:14px;padding:16px;
+}
+@media (min-width:768px){.panel>summary{padding:20px 24px;gap:18px}}
+.panel>summary::-webkit-details-marker{display:none}
+.panel>summary:hover{background:var(--surface-2)}
+.pic-ico{
+  width:46px;height:46px;flex:0 0 auto;border-radius:14px;
+  background:var(--amber);display:grid;place-items:center;
+}
+.pic-ico svg{width:24px;height:24px;fill:#3A3A3A}
+.panel>summary h2{margin:0;font-size:clamp(17px,3.4vw,22px);font-weight:600;letter-spacing:-.02em;flex:1}
+.count{color:var(--muted);font-size:13px;font-weight:500;font-variant-numeric:tabular-nums}
+.chev{width:22px;height:22px;flex:0 0 auto;stroke:var(--muted);stroke-width:2.4;fill:none;transition:transform .25s}
+.panel[open]>summary .chev{transform:rotate(180deg)}
+.panel[open]>summary{border-bottom:1px solid var(--border)}
+.panel-body{padding:6px 16px 26px}
+@media (min-width:768px){.panel-body{padding:10px 24px 32px}}
+
+/* ===== ประวัติ ===== */
+.bio-grid{display:grid;gap:14px;margin-top:16px}
+@media (min-width:720px){.bio-grid{grid-template-columns:1fr 1fr}}
+.tile{background:var(--surface-2);border-radius:16px;padding:18px 18px 20px}
+.tile h3{
+  margin:0 0 12px;font-size:12px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink);
+  display:inline-block;background:var(--amber);padding:3px 10px;border-radius:7px;
+}
+.tile ul{margin:0;padding-left:1.1em}
+.tile li{margin-bottom:7px;font-size:14.5px}
+.tile li::marker{color:var(--amber)}
+.tile li:last-child{margin-bottom:0}
+.tile .degree{margin:0;font-size:16px;font-weight:600}
+.tile .major{margin:3px 0 0;color:var(--muted);font-size:14.5px}
+
+.sec-title{
+  margin:32px 0 14px;font-size:15.5px;font-weight:600;letter-spacing:-.01em;
+  padding-bottom:10px;border-bottom:2px solid var(--amber);
+}
+
+/* ===== ผลงาน ===== */
+.group{margin-top:28px}
+.group:first-child{margin-top:12px}
+.group-head{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:3px 12px;
+  padding:10px 14px;margin-bottom:4px;border-radius:12px;
+  background:var(--surface-2);
+}
+.group-head strong{font-size:15.5px;font-weight:600;letter-spacing:-.01em}
+.group-head span{color:var(--muted);font-size:13px}
+
+.work{border-bottom:1px solid var(--border)}
+.work:last-child{border-bottom:0}
+.work>summary{list-style:none;cursor:pointer;user-select:none;display:flex;align-items:center;gap:12px;padding:15px 4px}
+.work>summary::-webkit-details-marker{display:none}
+.bar{width:4px;height:17px;flex:0 0 auto;border-radius:3px;background:var(--amber);transition:height .2s}
+.work[open]>summary .bar{height:26px}
+.work-title{flex:1;font-size:15.5px;font-weight:600;letter-spacing:-.01em;transition:.15s}
+.work>summary:hover .work-title{color:var(--amber-deep)}
+.badge{
+  flex:0 0 auto;font-size:11.5px;font-weight:500;color:var(--ink);
+  background:var(--amber-soft);border-radius:100px;padding:3px 10px;font-variant-numeric:tabular-nums;
+}
+.work .chev{width:18px;height:18px}
+.work[open]>summary .chev{transform:rotate(180deg)}
+.work-body{padding:0 4px 26px 20px}
+.desc{margin:0 0 18px;color:var(--muted);font-size:14.5px;max-width:74ch}
+.desc + .blist{margin-top:-8px}
+.blist{margin:0 0 18px;padding-left:1.1em;color:var(--muted);font-size:14.5px;max-width:74ch}
+.blist li{margin-bottom:8px}
+.blist li::marker{color:var(--amber)}
+
+/* ===== วิดีโอ ===== */
+.vids{display:grid;gap:18px;grid-template-columns:1fr}
+@media (min-width:640px){.vids{grid-template-columns:repeat(2,1fr)}}
+.vids.one{grid-template-columns:1fr;max-width:660px}
+.vids.tall{grid-template-columns:repeat(2,1fr);gap:14px}
+@media (min-width:640px){.vids.tall{grid-template-columns:repeat(4,1fr);gap:16px}}
+.vids.tall.one{max-width:250px}
+.vid{border:0;padding:0;background:transparent;text-align:left;cursor:pointer;display:block}
+.thumb{
+  position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+  background:var(--surface-2);box-shadow:var(--shadow);
+  transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s;
+}
+.vid:hover .thumb,.vid:focus-visible .thumb{transform:translateY(-4px);box-shadow:var(--shadow-lift)}
+.vid:focus-visible{outline:none}
+.vid:focus-visible .thumb{outline:3px solid var(--amber);outline-offset:3px}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+.vid:hover .thumb img{transform:scale(1.05)}
+.thumb.blank{background:linear-gradient(140deg,#4A4A4A,#2C2C2C 60%,#3F3A2C)}
+.thumb.blank::after{
+  content:attr(data-t);position:absolute;left:12px;right:12px;bottom:11px;
+  color:rgba(255,255,255,.85);font-size:12px;font-weight:500;line-height:1.35;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.play{position:absolute;inset:0;display:grid;place-items:center;
+  background:linear-gradient(to top,rgba(0,0,0,.4),rgba(0,0,0,0) 58%);transition:.25s}
+.vid:hover .play{background:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,.06) 62%)}
+.play i{
+  width:52px;height:52px;border-radius:50%;background:var(--amber);
+  display:grid;place-items:center;box-shadow:0 4px 18px rgba(0,0,0,.35);
+  transition:transform .25s cubic-bezier(.2,.7,.3,1);
+}
+.vid:hover .play i{transform:scale(1.12)}
+.play svg{width:19px;height:19px;margin-left:3px;fill:#3A3A3A}
+.vid-label{margin:9px 2px 0;font-size:13.5px;font-weight:500}
+
+/* ===== แกลเลอรีภาพ ===== */
+.gal{display:grid;gap:10px;grid-template-columns:repeat(2,1fr);margin-top:18px}
+@media (min-width:640px){.gal{grid-template-columns:repeat(3,1fr);gap:12px}}
+.gal button{border:0;padding:0;cursor:pointer;background:var(--surface-2);
+  aspect-ratio:4/3;border-radius:12px;overflow:hidden}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .4s,opacity .2s}
+.gal button:hover img{transform:scale(1.06);opacity:.93}
+.gal button:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+.todo{margin:0;padding:14px 16px;border-radius:12px;background:var(--amber-soft);
+  color:var(--ink);font-size:13.5px;font-weight:500}
+
+/* ===== lightbox ===== */
+dialog{padding:0;border:0;width:100%;height:100%;max-width:100vw;max-height:100vh;background:transparent;overflow:hidden}
+dialog::backdrop{background:rgba(20,20,20,.94);backdrop-filter:blur(6px)}
+.lb{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;gap:14px}
+.frame{width:100%;max-width:min(1400px,calc((100vh - 130px) * 16 / 9));aspect-ratio:16/9;
+  background:#000;border-radius:14px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.6)}
+.frame iframe,.frame img{width:100%;height:100%;border:0;display:block}
+.frame.pic{aspect-ratio:auto;max-height:calc(100vh - 130px);width:auto;max-width:96vw;background:transparent;box-shadow:none}
+.frame.pic img{width:auto;height:auto;max-width:96vw;max-height:calc(100vh - 130px);object-fit:contain;border-radius:10px}
+.lb-meta{text-align:center;color:#EDEDED;max-width:70ch}
+.lb-meta strong{display:block;font-size:15.5px;font-weight:600}
+.close{position:fixed;top:14px;right:14px;width:44px;height:44px;border-radius:50%;
+  border:0;cursor:pointer;background:var(--amber);color:#3A3A3A;display:grid;place-items:center;transition:.15s;z-index:2}
+.close:hover{transform:scale(1.08)}
+.close svg{width:18px;height:18px;stroke:currentColor;stroke-width:2.6;fill:none}
+
+footer{border-top:1px solid var(--border);margin-top:48px;padding:26px 0 56px;color:var(--muted);font-size:13px;
+  display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+footer .dot{color:var(--amber);font-weight:700}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="hero">
+      <div>
+        <span class="quote">&rdquo;</span>
+        <span class="eyebrow" id="eyebrow"></span>
+        <h1 id="h1"></h1>
+        <p class="sub-en" id="subEn"></p>
+        <nav class="links" id="links"></nav>
+      </div>
+      <div class="portrait" id="portrait" hidden><img id="photo" alt="" width="290" height="362"></div>
+    </div>
+  </header>
+
+  <details class="panel" id="panelProfile" open>
+    <summary>
+      <span class="pic-ico"><svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-5 0-9 2.5-9 5.5V22h18v-2.5c0-3-4-5.5-9-5.5z"/></svg></span>
+      <h2>ประวัติส่วนตัว</h2>
+      <svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="panel-body" id="bodyProfile"></div>
+  </details>
+
+  <details class="panel" id="panelWorks">
+    <summary>
+      <span class="pic-ico"><svg viewBox="0 0 24 24"><path d="M4 4h11a2 2 0 012 2v2.6l4-2.4v11.6l-4-2.4V18a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg></span>
+      <h2>ผลงาน</h2>
+      <span class="count" id="workCount"></span>
+      <svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="panel-body" id="bodyWorks"></div>
+  </details>
+
+  <footer id="foot"></footer>
+</div>
+
+<dialog id="lb" aria-label="ตัวแสดงสื่อ">
+  <button class="close" id="closeBtn" aria-label="ปิด">
+    <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lb">
+    <div class="frame" id="frame"></div>
+    <div class="lb-meta" id="lbMeta"></div>
+  </div>
+</dialog>
+
+<script src="data.js"></script>
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
+  ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+
+/* ---------- หัวเว็บ ---------- */
+document.title = SITE.name + " — Portfolio";
+$("#eyebrow").textContent = SITE.role;
+$("#h1").innerHTML = esc(SITE.name) + (SITE.nickname ? " (" + esc(SITE.nickname) + ")" : "") +
+  '<span class="dot">.</span>';
+$("#subEn").textContent = SITE.nameEn;
+if (SITE.photo) { $("#photo").src = SITE.photo; $("#portrait").hidden = false; }
+$("#links").innerHTML = SITE.links
+  .map((l) => `<a href="${esc(l.url)}">${esc(l.label)}</a>`).join("");
+$("#foot").innerHTML = `<span>© ${new Date().getFullYear()} ${esc(SITE.name)}</span>
+  <span class="dot">•</span><span>${esc(SITE.role)}</span>`;
+
+/* ---------- สื่อ ---------- */
+const embedSrc = (v) => v.type === "youtube"
+  ? `https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&modestbranding=1&playsinline=1`
+  : `https://drive.google.com/file/d/${v.id}/preview`;
+
+const MEDIA = [];
+
+function videoHTML(v, fallbackTitle) {
+  const name = v.label || fallbackTitle;
+  const i = MEDIA.push({ kind: "video", v, title: name }) - 1;
+  const ar = v.ar || 16 / 9;
+  return `
+    <button class="vid" data-m="${i}" aria-label="เล่น ${esc(name)}">
+      <div class="thumb${v.poster ? "" : " blank"}" style="aspect-ratio:${ar}"
+           ${(!v.poster && !v.label) ? `data-t="${esc(name)}"` : ""}>
+        ${v.poster ? `<img src="${esc(v.poster)}" alt="" loading="lazy" decoding="async">` : ""}
+        <span class="play"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></i></span>
+      </div>
+      ${v.label ? `<p class="vid-label">${esc(v.label)}</p>` : ""}
+    </button>`;
+}
+
+function galleryHTML(images, title) {
+  if (!images || !images.length) return "";
+  return `<div class="gal">` + images.map((src) => {
+    const i = MEDIA.push({ kind: "image", src, title }) - 1;
+    return `<button data-m="${i}" aria-label="ดูภาพ ${esc(title)}">
+        <img src="${esc(src)}" alt="" loading="lazy" decoding="async"></button>`;
+  }).join("") + `</div>`;
+}
+
+function mediaBlock(work) {
+  let out = "";
+  if (work.videos && work.videos.length) {
+    const tall = work.videos.every((v) => (v.ar || 1.78) < 1);
+    out += `<div class="vids${tall ? " tall" : ""}${work.videos.length === 1 ? " one" : ""}">`
+         + work.videos.map((v) => videoHTML(v, work.title)).join("") + `</div>`;
+  }
+  out += galleryHTML(work.images, work.title);
+  if (!out) out = `<p class="todo">ยังไม่ได้ใส่วิดีโอ/ภาพของหัวข้อนี้</p>`;
+  return out;
+}
+
+/* ---------- ประวัติส่วนตัว ---------- */
+const P = PROFILE;
+$("#bodyProfile").innerHTML = `
+  <div class="bio-grid">
+    <div class="tile"><h3>Education</h3>
+      <p class="degree">${esc(P.education.degree)}</p>
+      <p class="major">${esc(P.education.major)}</p></div>
+    <div class="tile"><h3>What We Learn</h3>
+      <ul>${P.learn.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+    <div class="tile"><h3>What We Do</h3>
+      <ul>${P.do.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+    <div class="tile"><h3>My Jobs — Video Editor &amp; Motion Editor</h3>
+      <ul>${P.jobs.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+  </div>
+  ${P.university.map((u) => `
+    <h3 class="sec-title">ประสบการณ์ในรั้วมหาวิทยาลัย — ${esc(u.title)}</h3>
+    <ul class="blist">${u.items.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+    ${galleryHTML(u.images, u.title)}`).join("")}
+`;
+
+/* ---------- ผลงาน ---------- */
+$("#workCount").textContent = GROUPS.reduce((n, g) => n + g.works.length, 0) + " ชิ้น";
+$("#bodyWorks").innerHTML = GROUPS.map((g) => `
+  <section class="group">
+    <div class="group-head">
+      <strong>${esc(g.org)}</strong>
+      ${g.role ? `<span>${esc(g.role)}</span>` : ""}
+      ${g.period ? `<span>· ${esc(g.period)}</span>` : ""}
+    </div>
+    ${g.works.map((w) => {
+      const nv = (w.videos || []).length, ni = (w.images || []).length;
+      const badge = [nv ? nv + " วิดีโอ" : "", ni ? ni + " ภาพ" : ""].filter(Boolean).join(" · ");
+      return `
+      <details class="work">
+        <summary>
+          <span class="bar"></span>
+          <span class="work-title">${esc(w.title)}</span>
+          ${badge ? `<span class="badge">${esc(badge)}</span>` : ""}
+          <svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="work-body">
+          ${w.desc ? `<p class="desc">${esc(w.desc)}</p>` : ""}
+          ${w.bullets ? `<ul class="blist">${w.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}
+          ${mediaBlock(w)}
+        </div>
+      </details>`;
+    }).join("")}
+  </section>`).join("");
+
+/* ---------- lightbox ---------- */
+const dlg = $("#lb"), frame = $("#frame"), lbMeta = $("#lbMeta");
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-m]");
+  if (!btn) return;
+  const m = MEDIA[+btn.dataset.m];
+  if (m.kind === "video") {
+    const ar = m.v.ar || 16 / 9;
+    frame.className = "frame";
+    frame.style.aspectRatio = String(ar);
+    frame.style.maxWidth = `min(1400px, calc((100vh - 130px) * ${ar}))`;
+    frame.innerHTML = `<iframe src="${esc(embedSrc(m.v))}"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        allowfullscreen referrerpolicy="strict-origin-when-cross-origin"
+        title="${esc(m.title)}"></iframe>`;
+  } else {
+    frame.className = "frame pic";
+    frame.style.aspectRatio = ""; frame.style.maxWidth = "";
+    frame.innerHTML = `<img src="${esc(m.src)}" alt="${esc(m.title)}">`;
+  }
+  lbMeta.innerHTML = `<strong>${esc(m.title)}</strong>`;
+  dlg.showModal();
+});
+$("#closeBtn").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", (e) => {
+  if (e.target === dlg || e.target.classList.contains("lb")) dlg.close();
+});
+dlg.addEventListener("close", () => { frame.innerHTML = ""; });
+</script>
+</body>
+</html>
