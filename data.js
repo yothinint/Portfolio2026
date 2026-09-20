@@ -1,22 +1,25 @@
 /* ============================================================================
-   ข้อมูลทั้งหมดของเว็บ — สร้างอัตโนมัติจากสไลด์ด้วย gen_data.py
-   แก้ด้วยมือได้เลย (แต่ถ้ารัน gen_data.py ใหม่ ไฟล์นี้จะถูกเขียนทับ)
+   ข้อมูลทั้งหมดของเว็บ — สร้างอัตโนมัติด้วย gen_data.py
+   แก้ด้วยมือได้ แต่ถ้ารัน gen_data.py ใหม่ ไฟล์นี้จะถูกเขียนทับ
 
-   วิดีโอ : { type:"drive"|"youtube", id:"...", label:"ชื่อคลิป", poster:"img/..." }
-   ถ้าไม่มี poster เว็บจะวาดพื้นหลังไล่สีพร้อมปุ่มเล่นให้เอง
+   วิดีโอ : { type:"youtube"|"drive", id:"...", label:"...", ar:1.7778, poster:"..." }
+            ar 1.7778 = 16:9 · 0.5625 = 9:16 · 1 = 1:1
+            YouTube ไม่ต้องใส่ poster (ดึงจาก i.ytimg.com ให้เอง)
 ============================================================================ */
 
 const SITE = {
   "name": "โยธิน อินทรภิรมย์",
   "nameEn": "Yothin Intaraphirom",
   "nickname": "โย",
-  "role": "Video Editor & Motion Designer",
+  "role": "Senior Video Editor & Motion Designer",
   "photo": "photo/profile.webp",
   "avatar": "photo/avatar.webp",
-  "links": [
+  "contacts": [
     {
-      "label": "อีเมล",
-      "url": "mailto:yothin42@gmail.com"
+      "type": "อีเมล",
+      "value": "yothin42@gmail.com",
+      "url": "mailto:yothin42@gmail.com",
+      "icon": "mail"
     }
   ]
 };
@@ -24,18 +27,10 @@ const SITE = {
 const PROFILE = {
   "education": {
     "degree": "วท.บ. สาธารณสุขศาสตร์",
-    "major": "สาขาสุขศึกษาและส่งเสริมสุขภาพ"
+    "major": "สาขาสุขศึกษาและส่งเสริมสุขภาพ",
+    "university": "มหาวิทยาลัยมหิดล",
+    "logo": "photo/mahidol.webp"
   },
-  "learn": [
-    "ความรู้ทางวิทยาศาสตร์สุขภาพ",
-    "การบริหาร / การจัดฝึกอบรม",
-    "จิตวิทยาและพฤติกรรมศาสตร์",
-    "นิเทศศาสตร์"
-  ],
-  "do": [
-    "วิเคราะห์และวางแผนการจัดโครงการและการฝึกอบรม โดยใช้หลักจิตวิทยามาประกอบ",
-    "จัดทำสื่อต่าง ๆ เพื่อการสื่อสารที่ง่ายขึ้น"
-  ],
   "jobs": [
     "เตรียม Script และ Story Board สำหรับการถ่ายทำ",
     "จัดสถานที่สำหรับถ่ายทำ ดูแลเรื่องแสง เสียง และอุปกรณ์อื่น ๆ ที่จำเป็นในการถ่ายทำงานนั้น ๆ",
@@ -43,6 +38,25 @@ const PROFILE = {
     "ถ่ายภาพนิ่งทั้งงาน Event ภาพนิ่งสำหรับทำ Thumbnail และภาพเพื่อใช้ทำโปรโมทต่าง ๆ",
     "งาน Motion Graphic สำหรับใช้ในวิดีโอต่าง ๆ หรือสำหรับใช้เพื่อยิง Ad ใน Social Media",
     "งานวิดีโอและ Motion Graphic เพื่อใช้กับองค์กรใหญ่ ๆ เช่น SCBX, Kbank, True Business, NITMX"
+  ],
+  "career": [
+    {
+      "org": "MEZ Motowork Co., Ltd."
+    },
+    {
+      "org": "Techsauce Media Co., Ltd."
+    },
+    {
+      "org": "Sino-Thai Communications Group Co., Ltd."
+    },
+    {
+      "org": "LEARN Corporation Public Company Limited"
+    },
+    {
+      "org": "Thairath Money",
+      "role": "Senior Video Editor",
+      "current": true
+    }
   ],
   "university": [
     {
@@ -91,9 +105,9 @@ const PROFILE = {
 
 const GROUPS = [
   {
-    "org": "MEZ Motowork Co., Ltd.",
-    "role": "Video Editor",
-    "period": "May 2021 – Feb 2022",
+    "org": "ยาง Metzeler",
+    "role": "",
+    "period": "",
     "works": [
       {
         "title": "MEZ Motowork",
@@ -103,35 +117,19 @@ const GROUPS = [
             "type": "drive",
             "id": "1XyHTWdCNKqUkcw7UMFx04cXdnXDvjWET",
             "label": "METZELER Z8 — Road Sport with StreetUppercut",
-            "ar": 1.7778,
-            "poster": "img/poster/s05-v1.webp"
+            "poster": "img/poster/s05-v1.webp",
+            "ar": 1.7778
           }
         ],
-        "images": [
-          "img/s05-1.webp"
-        ]
+        "images": []
       }
     ]
   },
   {
-    "org": "Techsauce Media Co., Ltd.",
-    "role": "Video Editor",
-    "period": "Feb 2022 – Jul 2023",
+    "org": "Techsauce",
+    "role": "",
+    "period": "",
     "works": [
-      {
-        "title": "Techsauce Media",
-        "desc": "",
-        "videos": [
-          {
-            "type": "drive",
-            "id": "16Dhz8zPyvDj4V_OwdyVTV3zOILrKir_G",
-            "label": "Major App — Mobile First",
-            "ar": 1.7778,
-            "poster": "img/poster/s06-v1.webp"
-          }
-        ],
-        "images": []
-      },
       {
         "title": "Techsauce Global Summit 2022",
         "desc": "งานรวม Startup สาย Technology และเชิญ Speaker ที่เป็นระดับผู้บริหารจากทั่วโลกมาพูดในงาน วันที่ 26–27 สิงหาคม 2565 ที่ไอคอนสยาม",
@@ -173,8 +171,8 @@ const GROUPS = [
             "type": "drive",
             "id": "1IcLll2Ri7Jy6keFhOtQCEToaleJVkzPF",
             "label": "วิดีโองาน Press Conference",
-            "ar": 1.7778,
-            "poster": "img/poster/s09-v1.webp"
+            "poster": "img/poster/s09-v1.webp",
+            "ar": 1.7778
           }
         ],
         "images": [
@@ -193,8 +191,8 @@ const GROUPS = [
             "type": "drive",
             "id": "12LgjpmZ-Dnvu_p7XPvkiBm9RaeO78rsY",
             "label": "วิดีโองาน Press Conference",
-            "ar": 1.7778,
-            "poster": "img/poster/s10-v1.webp"
+            "poster": "img/poster/s10-v1.webp",
+            "ar": 1.7778
           }
         ],
         "images": [
@@ -212,15 +210,15 @@ const GROUPS = [
             "type": "drive",
             "id": "1vS5cuD-y91DPeqaYGv9we8lbPs7ntWMs",
             "label": "Saucy Thoughts — Gen Z จะเป็นเจ้าของกิจการที่เจ๋งกว่ารุ่นพ่อรุ่นแม่",
-            "ar": 0.5625,
-            "poster": "img/poster/s12-v1.webp"
+            "poster": "img/poster/s12-v1.webp",
+            "ar": 0.5625
           },
           {
             "type": "drive",
             "id": "1WEyxWjTHQBIy4sYXPwfMfIBVM7lte_0p",
             "label": "Sustainable — Climate Crisis causes cancer risk",
-            "ar": 0.5625,
-            "poster": "img/poster/s12-v2.webp"
+            "poster": "img/poster/s12-v2.webp",
+            "ar": 0.5625
           }
         ],
         "images": []
@@ -228,10 +226,183 @@ const GROUPS = [
     ]
   },
   {
-    "org": "ประสบการณ์ทำงานอื่น ๆ",
+    "org": "โปรเจกต์งาน Video ต่าง ๆ",
     "role": "",
     "period": "",
     "works": [
+      {
+        "title": "Thairath Money",
+        "desc": "",
+        "videos": [
+          {
+            "type": "youtube",
+            "id": "d1DjfLoO_Kc",
+            "label": "Google Maps ได้อะไร ? ทำไมให้คนใช้ฟรี ทั้งที่ต้นทุนมหาศาล | Digital Frontiers EP.34",
+            "ar": 1.7778
+          },
+          {
+            "type": "youtube",
+            "id": "6zDMH_Uu5fA",
+            "label": "GoPro หายไปไหน? แบรนด์กล้องสุดล้ำ จากสูงสุดสู่สามัญในพริบตาเดียว | Digital Frontiers EP.35",
+            "ar": 1.7778
+          },
+          {
+            "type": "youtube",
+            "id": "ZHoG3f9e-ew",
+            "label": "ถอดโมเดล SpaceX ธุรกิจที่คนเข้าใจผิดว่า “ขายจรวด” | Digital Frontiers EP.53",
+            "ar": 1.7778
+          }
+        ],
+        "images": []
+      },
+      {
+        "title": "Money Monster",
+        "desc": "ช่อง YouTube ที่มีผู้ติดตามกว่า 100,000 คน ของคุณทราย โศธิดา โชติวิจิตร เป็นเนื้อหาเกี่ยวกับการเงินและการลงทุน",
+        "videos": [
+          {
+            "type": "youtube",
+            "id": "_fTA-Rr1D5k",
+            "label": "Anthropic จากอาวุธลับ Pentagon สู่ศัตรูรัฐบาลสหรัฐ! | Money Monster EP.312",
+            "ar": 1.7778
+          },
+          {
+            "type": "youtube",
+            "id": "GodRVk34iaI",
+            "label": "จีนแฉ! Luxury Brand 80% ผลิตในจีน ไม่ใช่ยุโรป | Money Monster EP.170",
+            "ar": 1.7778
+          },
+          {
+            "type": "youtube",
+            "id": "qD7FZqrToiE",
+            "label": "ประเทศไทย ไม่จน เงินเข้าเยอะ แต่ไม่ถึงมือเรา? | Money Monster EP.301",
+            "ar": 1.7778
+          },
+          {
+            "type": "youtube",
+            "id": "-yp1oFeyhJE",
+            "label": "BlackRock โคตรรวย โคตรมีอำนาจ! | Money Monster EP.376",
+            "ar": 1.7778
+          }
+        ],
+        "images": []
+      },
+      {
+        "title": "Skooldio",
+        "desc": "",
+        "videos": [
+          {
+            "type": "youtube",
+            "id": "irQocObdz98",
+            "label": "AI, อัลกอริทึม, และอนาคตของการสร้างสรรค์ กับพี่มะเดี่ยว | Living With AI EP.7",
+            "ar": 1.7778
+          },
+          {
+            "type": "youtube",
+            "id": "z0LorZu7veo",
+            "label": "AI x Mental Health ยุค AI โหดร้าย ฮีลใจยังไงได้บ้าง Feat.คุณดุจดาว วัฒนปกรณ์ | Living With AI EP.5",
+            "ar": 1.7778
+          },
+          {
+            "type": "youtube",
+            "id": "blEJm-bolk8",
+            "label": "AI x ดูดวง ใครกันที่ลิขิตชะตาอนาคต กับ ดร. พีพี MIT Media Lab และ คุณแรปเตอร์ | Living with AI EP.4",
+            "ar": 1.7778
+          },
+          {
+            "type": "youtube",
+            "id": "Pqgoq2yAIeA",
+            "label": "AI x Relationship ไขปริศนารักยุคปัญญาประดิษฐ์กับ รศ.ดร.ชลิดาภรณ์ | Living With AI EP.3",
+            "ar": 1.7778
+          }
+        ],
+        "images": []
+      },
+      {
+        "title": "Happy Me Clinic",
+        "desc": "",
+        "videos": [
+          {
+            "type": "youtube",
+            "id": "9pyKETF96es",
+            "label": "รักตัวเองก่อนจะรักคนใคร 🥰🤗",
+            "ar": 0.5625
+          },
+          {
+            "type": "youtube",
+            "id": "fZzX_77KDwY",
+            "label": "รู้สึกเบื่อแฟนควรทำอย่างไร?",
+            "ar": 0.5625
+          }
+        ],
+        "images": []
+      },
+      {
+        "title": "TTB Fintalk",
+        "desc": "",
+        "sections": [
+          {
+            "label": "Long form",
+            "videos": [
+              {
+                "type": "youtube",
+                "id": "eW3NcQFDzq4",
+                "label": "Fintalk with GURUs : จัดพอร์ตเกษียณ เปลี่ยนชีวิตคุณ กับ คุณเฟิร์น ศิรัถยา อิศรภักดี Wealth Me Up",
+                "ar": 1.7778
+              },
+              {
+                "type": "youtube",
+                "id": "lnM0Qv8Z-b8",
+                "label": "Fintalk with GURUs : รักต้องคุย เงินต้องเคลียร์ กับ ดีเจพี่อ้อย Club Friday",
+                "ar": 1.7778
+              }
+            ]
+          },
+          {
+            "label": "Short form",
+            "videos": [
+              {
+                "type": "youtube",
+                "id": "Nz4iLUzN1Ig",
+                "label": "Fintalk EP5 | Temporal Discounting คืออะไร?",
+                "ar": 0.5625
+              },
+              {
+                "type": "youtube",
+                "id": "8C7e8DsXQ7M",
+                "label": "4 นิสัยการเงิน เข้าใจให้รักรอด💙 | Fintalk",
+                "ar": 0.5625
+              }
+            ]
+          }
+        ],
+        "videos": [],
+        "images": []
+      },
+      {
+        "title": "Money Studio",
+        "desc": "",
+        "videos": [
+          {
+            "type": "youtube",
+            "id": "7YEm4pmMpZ4",
+            "label": "EP13 | หุ้นกู้ หุ้น หรือกองทุนรวม…เลือกยังไงให้เหมาะกับเรา?",
+            "ar": 0.5625
+          },
+          {
+            "type": "youtube",
+            "id": "WgrndtRpCWs",
+            "label": "EP21 | รายได้สูง ≠ รวย",
+            "ar": 0.5625
+          },
+          {
+            "type": "youtube",
+            "id": "HXdBPLFr8-w",
+            "label": "Hydro Flask | ใช้ของแพงให้คุ้ม ด้วย The $1 Rule",
+            "ar": 0.5625
+          }
+        ],
+        "images": []
+      },
       {
         "title": "SCBX Project",
         "desc": "",
@@ -244,8 +415,8 @@ const GROUPS = [
             "type": "drive",
             "id": "1NsZyXufgWog5jKlnXMf8VroFQ89Le4fx",
             "label": "SCBX : Next Tech — Press Conference",
-            "ar": 1.6667,
-            "poster": "img/poster/s17-v1.webp"
+            "poster": "img/poster/s17-v1.webp",
+            "ar": 1.6667
           },
           {
             "type": "drive",
@@ -270,84 +441,21 @@ const GROUPS = [
             "type": "drive",
             "id": "15pb8BV259_pR7MBM4ejTq_N6gck9rnLc",
             "label": "One Call",
-            "ar": 1.0,
-            "poster": "img/poster/s18-v2.webp"
+            "poster": "img/poster/s18-v2.webp",
+            "ar": 1.0
           },
           {
             "type": "drive",
             "id": "1_368qU5MGIrcbsGRkKtdZiaEn5d8jpaQ",
             "label": "SMS Marketing",
-            "ar": 1.7778,
-            "poster": "img/poster/s18-v3.webp"
+            "poster": "img/poster/s18-v3.webp",
+            "ar": 1.7778
           },
           {
             "type": "drive",
             "id": "1T4L5q8dqNJXY91Gs0CowCEK3kU-8SC7Q",
             "label": "M2M",
             "ar": 1.7778
-          }
-        ],
-        "images": []
-      },
-      {
-        "title": "Thairath Money",
-        "desc": "คลิปสั้นแนวตั้งให้กับ Thairath Money",
-        "videos": [
-          {
-            "type": "drive",
-            "id": "12D3MlUHolKV7bux2KtksDTDvYqOb-qFr",
-            "label": "EP.03 L'Oréal",
-            "ar": 0.5625,
-            "poster": "img/poster/s19-v1.webp"
-          },
-          {
-            "type": "drive",
-            "id": "1Zun6pZVif-9PD5iBOdSsj3lLig32seDY",
-            "label": "EP.05 AP",
-            "ar": 0.5625,
-            "poster": "img/poster/s19-v2.webp"
-          },
-          {
-            "type": "drive",
-            "id": "1Mbt9A7IGL1QkZZmw6faO_XrIJAwUEmHK",
-            "label": "EP.08 TQM",
-            "ar": 0.5625,
-            "poster": "img/poster/s19-v3.webp"
-          },
-          {
-            "type": "drive",
-            "id": "13lOtln8QpTo8iUO_BEnQhlXBNsmd124o",
-            "label": "EP.11 SCB",
-            "ar": 0.5625,
-            "poster": "img/poster/s19-v4.webp"
-          }
-        ],
-        "images": []
-      },
-      {
-        "title": "Money Monster",
-        "desc": "ช่อง YouTube ที่มีผู้ติดตามกว่า 100,000 คน ของคุณทราย โศธิดา โชติวิจิตร เป็นเนื้อหาเกี่ยวกับการเงินและการลงทุน โดยมีลูกค้าเป็นผู้ให้บริการด้านการลงทุนชื่อดัง เช่น Binance, K Asset, The Wisdom, Dime, XM, Webull",
-        "videos": [
-          {
-            "type": "drive",
-            "id": "1YXvPgJ8r3r8BkV8xDFLBvuvYFYaVvxSD",
-            "label": "Binance",
-            "ar": 1.7778,
-            "poster": "img/poster/s20-v1.webp"
-          },
-          {
-            "type": "drive",
-            "id": "11HuX9YY4JJ_gIhlO-EAG0ik-IZGII30b",
-            "label": "K Asset",
-            "ar": 1.7778,
-            "poster": "img/poster/s20-v2.webp"
-          },
-          {
-            "type": "drive",
-            "id": "1K-ng0u5Qg1vW-tgBNGmVcU1X8RdGUlVC",
-            "label": "Dime — เทศกาลลดหย่อนภาษี",
-            "ar": 1.7778,
-            "poster": "img/poster/s20-v3.webp"
           }
         ],
         "images": []

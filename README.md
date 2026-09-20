@@ -35,15 +35,18 @@ curl -s -o /dev/null -w "%{http_code}\n" "https://drive.google.com/file/d/1gMf9U
 ## โครงสร้างเว็บ
 
 **Dropdown 1 — ประวัติส่วนตัว**
-Education · What We Learn · What We Do · My Jobs (เฉพาะ Video Editor & Motion Editor) · ประสบการณ์ในรั้วมหาวิทยาลัย 2 หัวข้อ พร้อมภาพ 22 ใบ
+Education (พร้อมตรามหาวิทยาลัยมหิดล) · ประวัติการทำงาน · My Jobs · ประสบการณ์ในรั้วมหาวิทยาลัย 2 หัวข้อ พร้อมภาพ 22 ใบ
 
-**Dropdown 2 — ผลงาน** 12 ชิ้น แบ่ง 3 กลุ่ม แต่ละหัวข้อสีฟ้าเป็น dropdown ย่อย
+**Dropdown 2 — ผลงานบางส่วน** 15 หัวข้อ แบ่ง 3 กลุ่ม แต่ละหัวข้อเป็น dropdown ย่อย
 
 | กลุ่ม | ผลงาน |
 |---|---|
-| MEZ Motowork · May 2021 – Feb 2022 | MEZ Motowork |
-| Techsauce Media · Feb 2022 – Jul 2023 | Techsauce Media · Techsauce Global Summit 2022 · NFT : Platfinder Club · Thailand Accelerator · MIT Media Lab Forum · TS Short |
-| ประสบการณ์ทำงานอื่น ๆ | SCBX Project · True Business · Thairath Money · Money Monster · NITMX |
+| ยาง Metzeler | MEZ Motowork |
+| Techsauce | Techsauce Global Summit 2022 · NFT : Platfinder Club · Thailand Accelerator · MIT Media Lab Forum · TS Short |
+| โปรเจกต์งาน Video ต่าง ๆ | Thairath Money · Money Monster · Skooldio · Happy Me Clinic · TTB Fintalk · Money Studio · SCBX Project · True Business · NITMX |
+
+วิดีโอรวม 34 ตัว — Google Drive 14 ตัว (จากสไลด์) + YouTube 20 ตัว
+
 
 ## แก้ข้อมูล
 
@@ -116,3 +119,18 @@ repo → **Settings → Pages** → Source = `Deploy from a branch`, Branch = `m
 | ฟอนต์ | Prompt (Google Fonts) |
 
 dark mode สลับพื้นเป็น `#1A1A1A` โดยคงสีเหลืองไว้เหมือนเดิม
+
+## หัวข้อย่อยใน 1 ผลงาน
+
+ถ้าอยากแบ่งเป็นกลุ่มย่อยแบบ TTB Fintalk (Long form / Short form) ใช้ `sections`:
+
+```js
+{
+  title: "TTB Fintalk",
+  sections: [
+    { label: "Long form",  videos: [ ... ] },
+    { label: "Short form", videos: [ ... ] },
+  ],
+  videos: [], images: [],
+}
+```
