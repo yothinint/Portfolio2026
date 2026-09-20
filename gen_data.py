@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """สร้าง data.js จาก extracted.json (ผลแกะสไลด์) + ข้อมูลที่กำหนดไว้ด้านล่าง"""
-import json, os, re
+import hashlib, json, os, re
 from PIL import Image, ImageStat
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -166,6 +166,18 @@ head = """/* ===================================================================
 """
 with open(os.path.join(HERE, "data.js"), "w", encoding="utf-8") as f:
     f.write(head + js("SITE", SITE) + js("PROFILE", PROFILE) + js("GROUPS", GROUPS))
+
+# แปะ hash ของ data.js ไว้ท้าย src ใน index.html — กันเบราว์เซอร์ใช้ไฟล์เก่าจากแคช
+# (GitHub Pages ส่ง cache-control: max-age=600 มาให้ทุกไฟล์)
+_dp = os.path.join(HERE, "data.js")
+_h = hashlib.md5(open(_dp, "rb").read()).hexdigest()[:8]
+_ip = os.path.join(HERE, "index.html")
+_html = open(_ip, encoding="utf-8").read()
+_new = re.sub(r'<script src="data\.js(?:\?v=[^"]*)?"></script>',
+              f'<script src="data.js?v={_h}"></script>', _html)
+if _new != _html:
+    open(_ip, "w", encoding="utf-8").write(_new)
+print(f"เวอร์ชัน data.js = {_h}")
 
 def count(w):
     return len(w.get("videos", [])) + sum(len(s["videos"]) for s in w.get("sections", []))
