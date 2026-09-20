@@ -41,8 +41,8 @@ SITE = {
     "nameEn": "Yothin Intaraphirom",
     "nickname": "โย",
     "role": "Video Editor & Motion Designer",
-    "photo": "img/profile.webp",
-    "avatar": "img/avatar.webp",
+    "photo": "photo/profile.webp",
+    "avatar": "photo/avatar.webp",
     "links": [{"label": "อีเมล", "url": "mailto:yothin42@gmail.com"}],
 }
 
