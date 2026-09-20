@@ -16,10 +16,22 @@ const SITE = {
   "avatar": "photo/avatar.webp",
   "contacts": [
     {
+      "type": "โทรศัพท์",
+      "value": "080-379-1992",
+      "url": "tel:+66803791992",
+      "icon": "phone"
+    },
+    {
       "type": "อีเมล",
       "value": "yothin42@gmail.com",
       "url": "mailto:yothin42@gmail.com",
       "icon": "mail"
+    },
+    {
+      "type": "LINE",
+      "value": "iryothin",
+      "url": "https://line.me/ti/p/~iryothin",
+      "icon": "line"
     }
   ]
 };
