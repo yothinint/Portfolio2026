@@ -37,13 +37,16 @@ curl -s -o /dev/null -w "%{http_code}\n" "https://drive.google.com/file/d/1gMf9U
 **Dropdown 1 — ประวัติส่วนตัว**
 Education (พร้อมตรามหาวิทยาลัยมหิดล) · ประวัติการทำงาน · My Jobs · ประสบการณ์ในรั้วมหาวิทยาลัย 2 หัวข้อ พร้อมภาพ 22 ใบ
 
-**Dropdown 2 — ผลงานบางส่วน** 15 หัวข้อ แบ่ง 3 กลุ่ม แต่ละหัวข้อเป็น dropdown ย่อย
+**Dropdown 2 — ผลงานบางส่วน** 16 หัวข้อ แบ่ง 2 กลุ่ม แต่ละหัวข้อเป็น dropdown ย่อย
 
-| กลุ่ม | ผลงาน |
+| กลุ่ม | ผลงาน (เรียงตามลำดับที่แสดง) |
 |---|---|
-| ยาง Metzeler | MEZ Motowork |
-| Techsauce | Techsauce Global Summit 2022 · NFT : Platfinder Club · Thailand Accelerator · MIT Media Lab Forum · TS Short |
-| โปรเจกต์งาน Video ต่าง ๆ | Thairath Money · Money Monster · Skooldio · Happy Me Clinic · TTB Fintalk · Money Studio · SCBX Project · True Business · NITMX |
+| Video | MEZ Motowork · Techsauce Global Summit 2022 · MIT Media Lab Forum · TS Short · Thairath Money · Money Monster · Skooldio · Happy Me Clinic · TTB Fintalk · Money Studio · SCBX Project (Next Tech) · NITMX |
+| Motion Graphic Video | NFT : Platfinder Club · Thailand Accelerator · SCBX Project (AI Journey) · True Business |
+
+> SCBX Project อยู่ทั้งสองกลุ่ม แยกตามงานย่อย — Next Tech เป็นงาน Video, AI Journey เป็นงาน Motion Graphic
+> ใน `gen_data.py` ใช้ตัวแปร `SCBX` แล้วหั่นด้วย `SCBX[0:1]` / `SCBX[1:2]`
+
 
 วิดีโอรวม 34 ตัว — Google Drive 14 ตัว (จากสไลด์) + YouTube 20 ตัว
 

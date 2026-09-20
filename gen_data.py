@@ -96,58 +96,67 @@ PROFILE = {
 }
 
 # ---------------------------------------------------------------------- ผลงาน
-GROUPS = [
-    {"org": "ยาง Metzeler", "role": "", "period": "", "works": [
-        {"title": "MEZ Motowork",
-         "desc": "งานตัดต่อวิดีโอโปรโมทยางมอเตอร์ไซค์ METZELER",
-         "videos": drive(5, ["METZELER Z8 — Road Sport with StreetUppercut"]),
-         "images": []},
-    ]},
+SCBX = drive(17, ["SCBX : Next Tech — Press Conference", "SCBX : AI Journey"])
 
-    {"org": "Techsauce", "role": "", "period": "", "works": [
+GROUPS = [
+    {"org": "Video", "role": "", "period": "", "works": [
+        {"title": "MEZ Motowork", "desc": "",
+         "videos": drive(5, ["METZELER Z8 — Road Sport with StreetUppercut"]), "images": []},
+
         {"title": "Techsauce Global Summit 2022",
          "desc": "งานรวม Startup สาย Technology และเชิญ Speaker ที่เป็นระดับผู้บริหารจากทั่วโลกมาพูดในงาน วันที่ 26–27 สิงหาคม 2565 ที่ไอคอนสยาม",
          "videos": drive(7, ["วิดีโอ Highlight งาน"]), "images": imgs(7)},
-        {"title": "NFT : Platfinder Club",
-         "desc": "วิดีโอ Motion สำหรับการเปิดตัว NFT ของ Techsauce ในงาน Techsauce Global Summit 2022",
-         "videos": drive(8, ["วิดีโอ Motion เปิดตัว NFT"]), "images": imgs(8)},
-        {"title": "Thailand Accelerator",
-         "desc": "งานที่จะช่วยเหลือบริษัท Startup รุ่นใหม่ ๆ ให้มีการเติบโตมากขึ้นในวงการธุรกิจไทย",
-         "videos": drive(9, ["วิดีโองาน Press Conference"]), "images": imgs(9)},
+
         {"title": "MIT Media Lab Forum",
          "desc": "งานที่รวมนวัตกรรมจากสถาบันเทคโนโลยีแมสซาชูเซตส์ ประเทศสหรัฐอเมริกา ซึ่งเป็นงานที่นำมาจัดที่ South East Asia เป็นครั้งแรก และนำมาจัดที่กรุงเทพมหานคร ประเทศไทย",
          "videos": drive(10, ["วิดีโองาน Press Conference"]), "images": imgs(10)},
+
         {"title": "TS Short", "desc": "คลิปสั้นแนวตั้งสำหรับช่องทางโซเชียลของ Techsauce",
          "videos": drive(12, ["Saucy Thoughts — Gen Z จะเป็นเจ้าของกิจการที่เจ๋งกว่ารุ่นพ่อรุ่นแม่",
                               "Sustainable — Climate Crisis causes cancer risk"]), "images": imgs(12)},
-    ]},
 
-    {"org": "โปรเจกต์งาน Video ต่าง ๆ", "role": "", "period": "", "works": [
-        {"title": "Thairath Money", "desc": "",
-         "videos": yt("Thairath Money"), "images": []},
+        {"title": "Thairath Money", "desc": "", "videos": yt("Thairath Money"), "images": []},
+
         {"title": "Money Monster",
-         "desc": "ช่อง YouTube ที่มีผู้ติดตามกว่า 100,000 คน ของคุณทราย โศธิดา โชติวิจิตร เป็นเนื้อหาเกี่ยวกับการเงินและการลงทุน",
+         "desc": "ช่อง YouTube ของคุณทราย โศธิดา โชติวิจิตร เนื้อหาเกี่ยวกับการเงินและการลงทุน มีผู้ติดตามรวมกันทุกช่องทางมากกว่า 1,000,000 คน",
          "videos": yt("Money Monster"), "images": []},
-        {"title": "Skooldio", "desc": "",
-         "videos": yt("Skooldio"), "images": []},
-        {"title": "Happy Me Clinic", "desc": "",
-         "videos": yt("Happy Me Clinic"), "images": []},
+
+        {"title": "Skooldio", "desc": "", "videos": yt("Skooldio"), "images": []},
+
+        {"title": "Happy Me Clinic", "desc": "", "videos": yt("Happy Me Clinic"), "images": []},
+
         {"title": "TTB Fintalk", "desc": "",
          "sections": [
             {"label": "Long form", "videos": yt("TTB Long")},
             {"label": "Short form", "videos": yt("TTB Short")},
          ], "videos": [], "images": []},
-        {"title": "Money Studio", "desc": "",
-         "videos": yt("Money Studio"), "images": []},
+
+        {"title": "Money Studio", "desc": "", "videos": yt("Money Studio"), "images": []},
+
         {"title": "SCBX Project", "desc": "",
-         "bullets": ["SCBX : Next Tech — ทำวิดีโอเปิดงานเปิดตัวโซนพื้นที่ SCBX ที่สยามพารากอน ชั้น 4",
-                     "SCBX : AI Journey — ทำ Motion Graphic สำหรับงาน AI Journey ภายในองค์กร SCBX ที่จะช่วยให้พนักงานเข้าใจลำดับและขั้นตอนการพัฒนาบุคลากรทางด้าน AI ในองค์กร"],
-         "videos": drive(17, ["SCBX : Next Tech — Press Conference", "SCBX : AI Journey"]), "images": imgs(17)},
-        {"title": "True Business", "desc": "ทำ Motion Graphic สำหรับยิง Ad Promotion ของ True Business",
-         "videos": drive(18, ["True CPaaS", "One Call", "SMS Marketing", "M2M"]), "images": imgs(18)},
+         "bullets": ["SCBX : Next Tech — ทำวิดีโอเปิดงานเปิดตัวโซนพื้นที่ SCBX ที่สยามพารากอน ชั้น 4"],
+         "videos": SCBX[0:1], "images": []},
+
         {"title": "NITMX",
          "desc": "ผู้คิดค้นระบบ PromptPay ของประเทศไทย ที่ล่าสุดจัดงาน NITMX : Hack to the Max ที่เปิดโอกาสให้คนสมัครเข้ามาแข่ง Hackathon เพื่อหาผู้ชนะไปดูงานที่ Singapore FinTech Festival 2024 ที่ประเทศสิงคโปร์",
          "videos": drive(21, ["NITMX : Hack to the Max"]), "images": imgs(21)},
+    ]},
+
+    {"org": "Motion Graphic Video", "role": "", "period": "", "works": [
+        {"title": "NFT : Platfinder Club",
+         "desc": "วิดีโอ Motion สำหรับการเปิดตัว NFT ของ Techsauce ในงาน Techsauce Global Summit 2022",
+         "videos": drive(8, ["วิดีโอ Motion เปิดตัว NFT"]), "images": imgs(8)},
+
+        {"title": "Thailand Accelerator",
+         "desc": "งานที่จะช่วยเหลือบริษัท Startup รุ่นใหม่ ๆ ให้มีการเติบโตมากขึ้นในวงการธุรกิจไทย",
+         "videos": drive(9, ["วิดีโองาน Press Conference"]), "images": imgs(9)},
+
+        {"title": "SCBX Project", "desc": "",
+         "bullets": ["SCBX : AI Journey — ทำ Motion Graphic สำหรับงาน AI Journey ภายในองค์กร SCBX ที่จะช่วยให้พนักงานเข้าใจลำดับและขั้นตอนการพัฒนาบุคลากรทางด้าน AI ในองค์กร"],
+         "videos": SCBX[1:2], "images": []},
+
+        {"title": "True Business", "desc": "ทำ Motion Graphic สำหรับยิง Ad Promotion ของ True Business",
+         "videos": drive(18, ["True CPaaS", "One Call", "SMS Marketing", "M2M"]), "images": imgs(18)},
     ]},
 ]
 

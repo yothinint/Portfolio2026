@@ -117,13 +117,13 @@ const PROFILE = {
 
 const GROUPS = [
   {
-    "org": "ยาง Metzeler",
+    "org": "Video",
     "role": "",
     "period": "",
     "works": [
       {
         "title": "MEZ Motowork",
-        "desc": "งานตัดต่อวิดีโอโปรโมทยางมอเตอร์ไซค์ METZELER",
+        "desc": "",
         "videos": [
           {
             "type": "drive",
@@ -134,14 +134,7 @@ const GROUPS = [
           }
         ],
         "images": []
-      }
-    ]
-  },
-  {
-    "org": "Techsauce",
-    "role": "",
-    "period": "",
-    "works": [
+      },
       {
         "title": "Techsauce Global Summit 2022",
         "desc": "งานรวม Startup สาย Technology และเชิญ Speaker ที่เป็นระดับผู้บริหารจากทั่วโลกมาพูดในงาน วันที่ 26–27 สิงหาคม 2565 ที่ไอคอนสยาม",
@@ -160,39 +153,6 @@ const GROUPS = [
           "img/s07-4.webp",
           "img/s07-5.webp",
           "img/s07-6.webp"
-        ]
-      },
-      {
-        "title": "NFT : Platfinder Club",
-        "desc": "วิดีโอ Motion สำหรับการเปิดตัว NFT ของ Techsauce ในงาน Techsauce Global Summit 2022",
-        "videos": [
-          {
-            "type": "drive",
-            "id": "1R4hEIWEin6RlXOB_ZxFB2_QVkz_tN5Zw",
-            "label": "วิดีโอ Motion เปิดตัว NFT",
-            "ar": 1.7778
-          }
-        ],
-        "images": []
-      },
-      {
-        "title": "Thailand Accelerator",
-        "desc": "งานที่จะช่วยเหลือบริษัท Startup รุ่นใหม่ ๆ ให้มีการเติบโตมากขึ้นในวงการธุรกิจไทย",
-        "videos": [
-          {
-            "type": "drive",
-            "id": "1IcLll2Ri7Jy6keFhOtQCEToaleJVkzPF",
-            "label": "วิดีโองาน Press Conference",
-            "poster": "img/poster/s09-v1.webp",
-            "ar": 1.7778
-          }
-        ],
-        "images": [
-          "img/s09-1.webp",
-          "img/s09-2.webp",
-          "img/s09-3.webp",
-          "img/s09-4.webp",
-          "img/s09-5.webp"
         ]
       },
       {
@@ -234,14 +194,7 @@ const GROUPS = [
           }
         ],
         "images": []
-      }
-    ]
-  },
-  {
-    "org": "โปรเจกต์งาน Video ต่าง ๆ",
-    "role": "",
-    "period": "",
-    "works": [
+      },
       {
         "title": "Thairath Money",
         "desc": "",
@@ -269,7 +222,7 @@ const GROUPS = [
       },
       {
         "title": "Money Monster",
-        "desc": "ช่อง YouTube ที่มีผู้ติดตามกว่า 100,000 คน ของคุณทราย โศธิดา โชติวิจิตร เป็นเนื้อหาเกี่ยวกับการเงินและการลงทุน",
+        "desc": "ช่อง YouTube ของคุณทราย โศธิดา โชติวิจิตร เนื้อหาเกี่ยวกับการเงินและการลงทุน มีผู้ติดตามรวมกันทุกช่องทางมากกว่า 1,000,000 คน",
         "videos": [
           {
             "type": "youtube",
@@ -419,8 +372,7 @@ const GROUPS = [
         "title": "SCBX Project",
         "desc": "",
         "bullets": [
-          "SCBX : Next Tech — ทำวิดีโอเปิดงานเปิดตัวโซนพื้นที่ SCBX ที่สยามพารากอน ชั้น 4",
-          "SCBX : AI Journey — ทำ Motion Graphic สำหรับงาน AI Journey ภายในองค์กร SCBX ที่จะช่วยให้พนักงานเข้าใจลำดับและขั้นตอนการพัฒนาบุคลากรทางด้าน AI ในองค์กร"
+          "SCBX : Next Tech — ทำวิดีโอเปิดงานเปิดตัวโซนพื้นที่ SCBX ที่สยามพารากอน ชั้น 4"
         ],
         "videos": [
           {
@@ -429,7 +381,70 @@ const GROUPS = [
             "label": "SCBX : Next Tech — Press Conference",
             "poster": "img/poster/s17-v1.webp",
             "ar": 1.6667
-          },
+          }
+        ],
+        "images": []
+      },
+      {
+        "title": "NITMX",
+        "desc": "ผู้คิดค้นระบบ PromptPay ของประเทศไทย ที่ล่าสุดจัดงาน NITMX : Hack to the Max ที่เปิดโอกาสให้คนสมัครเข้ามาแข่ง Hackathon เพื่อหาผู้ชนะไปดูงานที่ Singapore FinTech Festival 2024 ที่ประเทศสิงคโปร์",
+        "videos": [
+          {
+            "type": "drive",
+            "id": "1r0QaJsvL5zmLZzgWDTToCdkBN0KvdE16",
+            "label": "NITMX : Hack to the Max",
+            "ar": 1.7778
+          }
+        ],
+        "images": []
+      }
+    ]
+  },
+  {
+    "org": "Motion Graphic Video",
+    "role": "",
+    "period": "",
+    "works": [
+      {
+        "title": "NFT : Platfinder Club",
+        "desc": "วิดีโอ Motion สำหรับการเปิดตัว NFT ของ Techsauce ในงาน Techsauce Global Summit 2022",
+        "videos": [
+          {
+            "type": "drive",
+            "id": "1R4hEIWEin6RlXOB_ZxFB2_QVkz_tN5Zw",
+            "label": "วิดีโอ Motion เปิดตัว NFT",
+            "ar": 1.7778
+          }
+        ],
+        "images": []
+      },
+      {
+        "title": "Thailand Accelerator",
+        "desc": "งานที่จะช่วยเหลือบริษัท Startup รุ่นใหม่ ๆ ให้มีการเติบโตมากขึ้นในวงการธุรกิจไทย",
+        "videos": [
+          {
+            "type": "drive",
+            "id": "1IcLll2Ri7Jy6keFhOtQCEToaleJVkzPF",
+            "label": "วิดีโองาน Press Conference",
+            "poster": "img/poster/s09-v1.webp",
+            "ar": 1.7778
+          }
+        ],
+        "images": [
+          "img/s09-1.webp",
+          "img/s09-2.webp",
+          "img/s09-3.webp",
+          "img/s09-4.webp",
+          "img/s09-5.webp"
+        ]
+      },
+      {
+        "title": "SCBX Project",
+        "desc": "",
+        "bullets": [
+          "SCBX : AI Journey — ทำ Motion Graphic สำหรับงาน AI Journey ภายในองค์กร SCBX ที่จะช่วยให้พนักงานเข้าใจลำดับและขั้นตอนการพัฒนาบุคลากรทางด้าน AI ในองค์กร"
+        ],
+        "videos": [
           {
             "type": "drive",
             "id": "1rGn3DU3XbQKjrRbJmcyh8wTakXh4kHHZ",
@@ -467,19 +482,6 @@ const GROUPS = [
             "type": "drive",
             "id": "1T4L5q8dqNJXY91Gs0CowCEK3kU-8SC7Q",
             "label": "M2M",
-            "ar": 1.7778
-          }
-        ],
-        "images": []
-      },
-      {
-        "title": "NITMX",
-        "desc": "ผู้คิดค้นระบบ PromptPay ของประเทศไทย ที่ล่าสุดจัดงาน NITMX : Hack to the Max ที่เปิดโอกาสให้คนสมัครเข้ามาแข่ง Hackathon เพื่อหาผู้ชนะไปดูงานที่ Singapore FinTech Festival 2024 ที่ประเทศสิงคโปร์",
-        "videos": [
-          {
-            "type": "drive",
-            "id": "1r0QaJsvL5zmLZzgWDTToCdkBN0KvdE16",
-            "label": "NITMX : Hack to the Max",
             "ar": 1.7778
           }
         ],
